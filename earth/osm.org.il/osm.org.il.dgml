@@ -9,8 +9,8 @@
     <head>
       <!-- The license here applies to the actual map content, not this dgml file. See the license header above for the dgml file license -->
       <!-- The content that this license refers to is not distributed with this package -->
-      <license short="© OpenStreetMap contributors( CC-BY-SA">© OpenStreetMap contributors, CC-BY-SA</license>
-      <name>osm.org.il</name>
+      <license short="© OpenStreetMap contributors">© OpenStreetMap contributors, CC-BY-SA</license>
+      <name>IsraelHiking.osm.org.il</name>
       <target>earth</target>
       <theme>osm.org.il</theme>
       <icon pixmap="osm.org.il.png"/>
@@ -25,17 +25,18 @@
     <map bgcolor="#000000">
       <canvas/>
       <target/>
-      <layer name="osm.org.il" backend="texture">
+      <layer name="IsraelHiking.osm.org.il" backend="texture">
         <texture name="mapnik_data" expire="31536000">
           <sourcedir format="PNG"> earth/osm.org.il </sourcedir>
           <tileSize width="256" height="256"/>
           <storageLayout levelZeroColumns="1" levelZeroRows="1" maximumTileLevel="19" mode="Custom"/>
           <projection name="Mercator"/>
           <downloadUrl
-protocol="http" 
-host="www.osm.org.il" 
-port="80" 
-path="/IsraelHiking/Tiles/{zoomLevel}/{x}/{y}.png"/>
+            protocol="http"
+            host="IsraelHiking.osm.org.il"
+            port="80"
+            path="/Tiles/{zoomLevel}/{x}/{y}.png"
+          />
           <downloadPolicy usage="Browse" maximumConnections="20"/>
           <downloadPolicy usage="Bulk" maximumConnections="2"/>
         </texture>
@@ -46,12 +47,12 @@ path="/IsraelHiking/Tiles/{zoomLevel}/{x}/{y}.png"/>
           <storageLayout levelZeroColumns="1" levelZeroRows="1" maximumTileLevel="19" mode="Custom"/>
           <projection name="Mercator"/>
           <downloadUrl
-protocol="http" 
-host="www.osm.org.il" 
-port="80" 
-path="/IsraelHiking/OverlayTiles/{zoomLevel}/{x}/{y}.png"/>
-
-        <blending name="AlphaBlending"/>
+            protocol="http"
+            host="IsraelHiking.osm.org.il"
+            port="80"
+            path="/OverlayTiles/{zoomLevel}/{x}/{y}.png"
+          />
+          <blending name="AlphaBlending"/>
         </texture>
 
         <texture name="mtb" expire="31536000">
@@ -60,12 +61,12 @@ path="/IsraelHiking/OverlayTiles/{zoomLevel}/{x}/{y}.png"/>
           <storageLayout levelZeroColumns="1" levelZeroRows="1" maximumTileLevel="19" mode="Custom"/>
           <projection name="Mercator"/>
           <downloadUrl
-protocol="http" 
-host="www.osm.org.il" 
-port="80" 
-path="/IsraelHiking/mtbTiles/{zoomLevel}/{x}/{y}.png"/>
-
-        <blending name="AlphaBlending"/>
+            protocol="http"
+            host="IsraelHiking.osm.org.il"
+            port="80"
+            path="/mtbTiles/{zoomLevel}/{x}/{y}.png"
+          />
+          <blending name="AlphaBlending"/>
         </texture>
 
      </layer>
